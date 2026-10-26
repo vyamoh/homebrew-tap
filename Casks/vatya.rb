@@ -5,7 +5,7 @@ cask "vatya" do
   url "https://dl.vyamoh.com/vatya/#{version}/Vatya-#{version}-macos-arm64.zip"
   name "Vatya"
   desc "Menu bar developer utilities"
-  homepage "https://vyamoh.com"
+  homepage "https://vyamoh.com/"
 
   depends_on arch: :arm64
   depends_on macos: :tahoe
