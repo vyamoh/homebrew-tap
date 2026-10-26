@@ -8,15 +8,14 @@ cask "vatya" do
   homepage "https://vyamoh.com"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Vatya.app"
 
   # Releases are ad-hoc signed and not notarized; without this, Gatekeeper
   # blocks the first launch and every upgrade.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Vatya.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Vatya.app"]
   end
 
   zap trash: "~/Library/Containers/vyamoh.vatya"
