@@ -1,6 +1,6 @@
 cask "vatya" do
-  version "0.1.8"
-  sha256 "eaa512ca74cbd409d748838a564f0ce5d66b7a77e7d1ccc2a02222bd73e7d74a"
+  version "0.1.10"
+  sha256 "6b748baa7c96956ed06e680d4ce5ab82b16a9dec9cb69b909413d43cfb74e3e1"
 
   url "https://dl.vyamoh.com/vatya/#{version}/Vatya-#{version}-macos-arm64.zip"
   name "Vatya"
